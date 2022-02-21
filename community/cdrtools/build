@@ -7,4 +7,4 @@ sed -i 's|/opt/schily|/usr|' DEFAULTS/Defaults.linux
 sed -i 's|INSDIR=.*|INSDIR=bin|' rscsi/Makefile
 
 make
-make DESTDIR="$1" install
+make install
