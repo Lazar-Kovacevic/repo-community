@@ -10,4 +10,8 @@
 	UDEV_RULES_PATH=/usr/lib/udev
 
 make
-make DESTDIR="$1" install
+make install
+
+# Remove fuse device file, it isn't needed
+# and breaks the install
+rm -r "${1:?}/dev"
